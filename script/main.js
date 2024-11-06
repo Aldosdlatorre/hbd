@@ -15,8 +15,7 @@ const fetchData = () => {
           }
         }
 
-        // Check if the iteration is over
-        // Run amimation if so
+        
         if ( dataArr.length === dataArr.indexOf(customData) + 1 ) {
           animationTimeline();
         } 
@@ -24,9 +23,8 @@ const fetchData = () => {
     });
 };
 
-// Animation Timeline
 const animationTimeline = () => {
-  // Spit chars that needs to be animated individually
+ 
   const textBoxChars = document.getElementsByClassName("hbd-chatbox")[0];
   const hbd = document.getElementsByClassName("wish-hbd")[0];
 
