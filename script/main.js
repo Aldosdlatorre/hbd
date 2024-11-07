@@ -1,4 +1,3 @@
-// Import the data to customize and insert them into page
 const fetchData = () => {
   fetch("customize.json")
     .then(data => data.json())
@@ -15,16 +14,16 @@ const fetchData = () => {
           }
         }
 
-        
-        if ( dataArr.length === dataArr.indexOf(customData) + 1 ) {
+
+        if (dataArr.length === dataArr.indexOf(customData) + 1) {
           animationTimeline();
-        } 
+        }
       });
     });
 };
 
 const animationTimeline = () => {
- 
+
   const textBoxChars = document.getElementsByClassName("hbd-chatbox")[0];
   const hbd = document.getElementsByClassName("wish-hbd")[0];
 
@@ -290,15 +289,11 @@ const animationTimeline = () => {
       "+=1"
     );
 
-  // tl.seek("currentStep");
-  // tl.timeScale(2);
-
-  // Restart Animation on click
   const replyBtn = document.getElementById("replay");
   replyBtn.addEventListener("click", () => {
     tl.restart();
   });
 };
 
-// Run fetch and animation in sequence
+
 fetchData();
